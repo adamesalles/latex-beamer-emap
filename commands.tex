@@ -1,0 +1,109 @@
+\newcommand{\ds}{\displaystyle}
+\newcommand{\nl}{\newline}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ssty}{\scriptstyle}
+\newcommand{\bE}{\mathds{E}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cLN}{\mathcal{LN}}
+\newcommand{\bP}{{\rm I\!P}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bN}{{\rm I\!N}}
+\newcommand{\bR}{\mathds{R}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\ind}{\mathds{1}}
+\newcommand{\data}{\mathcal{D}}
+\newcommand{\bV}{\mathds{V}}
+
+% \renewcommand{\boldsymbol}{\symbf}
+
+\newcommand{\bfP}{\boldsymbol{P}}
+\newcommand{\bfQ}{\boldsymbol{Q}}
+\newcommand{\bfX}{\boldsymbol{X}}
+\newcommand{\bfY}{\boldsymbol{Y}}
+\newcommand{\bfZ}{\boldsymbol{Z}}
+\newcommand{\bfM}{\boldsymbol{M}}
+\newcommand{\bfU}{\boldsymbol{U}}
+
+\newcommand{\bfz}{\boldsymbol{z}}
+\newcommand{\bfm}{\boldsymbol{m}}
+\newcommand{\bfw}{\boldsymbol{w}}
+\newcommand{\bfv}{\boldsymbol{v}}
+\newcommand{\bfu}{\boldsymbol{u}}
+\newcommand{\bfx}{\boldsymbol{x}}
+\newcommand{\bfy}{\boldsymbol{y}}
+\newcommand{\bfb}{\boldsymbol{b}}
+\newcommand{\bfa}{\boldsymbol{a}}
+\newcommand{\bfp}{\boldsymbol{p}}
+\newcommand{\bff}{\boldsymbol{f}}
+\newcommand{\tbx}{\tilde{\bfx}}
+\newcommand{\tby}{\tilde{\bfy}}
+\newcommand{\tbf}{\tilde{\bff}}
+\newcommand{\yst}{\boldsymbol{y_\star}}
+\newcommand{\fst}{\boldsymbol{f_\star}}
+\newcommand{\xst}{\boldsymbol{x_\star}}
+\newcommand{\bfth}{\boldsymbol{\theta}}
+\newcommand{\bfmu}{\boldsymbol{\mu}}
+\newcommand{\bfxi}{\boldsymbol{\xi}}
+\newcommand{\bfsg}{\boldsymbol{\sigma}}
+
+\newcommand{\poi}{\text{Poisson}}
+\newcommand{\cov}{\text{Cov}}
+\newcommand{\gama}{\text{Gama}}
+\newcommand{\normal}{\text{Normal}}
+\newcommand{\ig}{\text{Inverse-Gamma}}
+\newcommand{\ber}{\text{Bernoulli}}
+\newcommand{\st}{\text{ s.t. }}
+\newcommand{\otw}{\text{ otherwise }}
+\newcommand{\gp}{\mathcal{GP}}
+
+\newcommand{\dU}{\mathcal{U}}
+
+\newcommand{\indep}{\perp \!\!\! \perp} %% independence
+\newcommand{\expec}{\operatorname{\mathds{E}}} %% expectation
+\newcommand{\pr}{\operatorname{\mathds{P}}} %% probability
+\newcommand{\vr}{\operatorname{\mathds{V}}} %% variance
+\newcommand{\rs}{X_1, X_2, \ldots, X_n} %%  random sample
+\newcommand{\rsy}{Y_1, Y_2, \ldots, Y_m} %%  random sample y
+\newcommand{\ods}{X_{(1)}, X_{(2)}, \ldots, X_{(n)} } %%  ordered sample
+\newcommand{\irs}{X_1, X_2, \ldots} %% infinite random sample
+\newcommand{\rsd}{x_1, x_2, \ldots, x_n} %%  random sample, realised
+\newcommand{\mle}{\hat{\theta}_n}
+\newcommand{\mme}{\tilde{\theta}_n}
+\newcommand{\rpl}{\mathbb{R}_+}
+\newcommand{\probto}{\overset{\pr}{\to}}
+
+
+\newtcbtheorem{theo}{Theorem}{colback=white!5,colframe=fgv_dark_blue, sharp corners,fonttitle=\bfseries, breakable}{theo}
+
+\newcounter{defi}
+\newtcbtheorem[use counter=defi]{defi}{Definition}{colback=white!5,colframe=fgv_dark_blue, sharp corners,fonttitle=\bfseries, breakable}{defi}
+
+\newtcbtheorem[auto counter]{remark}{Remark}{colback=white!5,colframe=fgv_light_blue, sharp corners,fonttitle=\bfseries}{remark}
+
+\newtcbtheorem{ex}{Example}{colback=white!5,colframe=white!30!black, sharp corners,fonttitle=\bfseries}{ex}
+
+\newtcbtheorem{lem}{Lemma}{colback=white!5,colframe=white!30!black, sharp corners,fonttitle=\bfseries}{lem}
+
+\renewtcolorbox{proof}[1][]{colback=white!5,colframe=white!50!black, sharp corners,fonttitle=\bfseries, title=Proof of #1}
+
+\newtcolorbox{display}[1][]{colback=white!5,colframe=fgv_dark_blue, sharp corners,fonttitle=\bfseries, title=#1}
+
+\newcommand{\newauthor}[2]{
+  \parbox{0.35\textwidth}{
+    \texorpdfstring
+      {
+        \centering
+        #1 \\
+        {\scriptsize{\urlstyle{same}\url{#2}\urlstyle{tt}}}
+      }
+      {#1}
+  }
+}

@@ -1,0 +1,124 @@
+\documentclass[xcolor=dvipsnames,t,aspectratio=169]{beamer} %t para ficar alinhado no topo do slide
+
+\usecolortheme{rose}
+\usecolortheme{dolphin}
+\usetheme{Boadilla}
+
+\input{imports}
+
+\input{settings}
+
+\input{commands}
+
+
+
+\titlegraphic{
+    \includegraphics[scale = 0.25]{emap_logo}
+}
+
+\logo{
+\begin{tikzpicture}[overlay,remember picture]
+\node[left=1.1cm, below=0.2cm] at (current page.30){
+    \includegraphics[width=0.165\textwidth]{emap_logo}};
+\end{tikzpicture}
+}
+
+
+\lstset{style=mystyle}
+
+\newcommand{\highlight}[1]{{\color{fgv_light_blue} #1}}
+
+
+
+\title{:title:} 
+
+\author{
+    :authors:
+}
+
+\date{{\color{fgv_dark_blue}  \textbf{:place:}\\ :date: }}
+
+\begin{document}
+
+\frame[plain]{\titlepage}
+\setcounter{framenumber}{0}
+
+\begin{frame}[c]{Slide Title}
+
+    Lorem ipsum dolor sit amet.
+
+    \begin{display}[Block Title]
+    You can use the command \highlight{highlight} to have \highlight{emphasize} some words.
+    \end{display}
+
+
+\end{frame}
+
+\begin{frame}[c]{Mathematics}
+
+    \begin{theo}{Weak Law of Large Numbers}{wlln} % env, title, label
+        Let $\rs$ be a random sample of size $n$ from a distribution with mean $\mu$ and variance $\sigma^2$. Then, for any $\epsilon > 0$,
+        \begin{equation*}
+            \pr\left[\left|\frac{1}{n}\sum_{i=1}^n X_i - \mu\right| > \epsilon\right] \to 0 \text{ as } n \to \infty.
+        \end{equation*}
+
+        In other words, $\frac{1}{n}\sum_{i=1}^n X_i \probto \mu$.
+    \end{theo}
+    
+\end{frame}
+
+\begin{frame}[c]{Mathematics}
+    
+        \begin{defi}{Consistency}{cons}
+            Let $\hat{\theta}_n$ be an estimator of $\theta$. We say that $\hat{\theta}_n$ is \highlight{consistent} if $\hat{\theta}_n \probto \theta$.
+        \end{defi}
+    
+        \begin{remark}{}{}
+            Theorem \ref{theo:wlln} together with Definition \ref{defi:cons} implies that the sample mean is a consistent estimator of the population mean.
+        \end{remark}
+    
+\end{frame}
+
+\begin{frame}[c]{Mathematics}
+    \begin{proof}[Theorem \ref{theo:wlln}] % proof carries only title
+        Let $\epsilon > 0$. By Chebyshev's inequality,
+        \begin{equation*}
+            \pr\left[\left|\frac{1}{n}\sum_{i=1}^n X_i - \mu\right| > \epsilon\right] \leq \frac{\sigma^2}{n\epsilon^2}.
+        \end{equation*}
+        Since $\sigma^2$ is a constant, the result follows.
+        
+    \end{proof}
+    
+\end{frame}
+
+\begin{frame}[c]{Mathematics}
+    Other useful envs could be:
+
+    \begin{ex}{Example Title}{ex1}
+        This is an example.
+    \end{ex}
+
+    \begin{lem}{Lemma Title}{lem1}
+        This is a lemma.
+    \end{lem}
+
+\end{frame}
+
+\begin{frame}[c, noframenumbering, plain]
+    \frametitle{~}
+        \vfill
+        \begin{center}
+            {\Huge Thanks!}\vspace{1.5em}\\
+            {\Large \highlight{Any thoughts?}}\\
+        \end{center}
+        \vfill
+        \begin{center}
+            {\small Special thanks to :special-thanks:}
+        \end{center}
+    \end{frame}
+
+
+
+
+
+\end{document} 
