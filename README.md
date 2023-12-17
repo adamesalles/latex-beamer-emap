@@ -1,6 +1,6 @@
 # Latex Beamer FGV EMAp Template
 
-Welcome to latex-beamer-emap, a LaTeX Beamer Template specifically designed for use by students and faculty at [FGV EMAp](https://emap.fgv.br/en). This template provides an easy and efficient way to create beautifully formatted presentations, maintaining the aesthetic and quality standards of our institution.
+Welcome to Latex Beamer FGV EMAp Template, a LaTeX Beamer Template specifically designed for use by students and faculty at [FGV EMAp](https://emap.fgv.br/en). This template provides an easy and efficient way to create beautifully formatted presentations, maintaining the aesthetic and quality standards of our institution.
 
 ## Getting Started
 To use this template, you'll need to have Git installed on your system. If you're new to Git, please visit Git's official site for installation instructions.
@@ -56,7 +56,7 @@ This project thrives on your input! If you have ideas, suggestions, or spot any 
 For any queries or suggestions, you can reach out to me at eadamesalles@gmail.com.
 
 ## Acknowledgments
-Special thanks to [Prof. Yuri Saporito](yurisaporito.com) for providing the early version of this template in 2021. I would also like to thank [Prof. Luiz Max de Carvalho](https://github.com/maxbiostat) for remembering me that quote from Lord Knuth: 
+Special thanks to [prof. Yuri Saporito](yurisaporito.com) for providing the early version of this template in 2021. I would also like to thank [prof. Luiz Max de Carvalho](https://github.com/maxbiostat) for remembering me that quote from Lord Knuth: 
 
 > Premature optimization is the root of all evil,
 
