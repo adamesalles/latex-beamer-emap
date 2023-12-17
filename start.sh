@@ -4,13 +4,13 @@
 echo "Welcome to the LaTeX Beamer Template for EMAp - by Adame"
 
 # Define the repository URL
-# REPO_URL="https://github.com/adamesalles/latex-beamer-emap.git"
+REPO_URL="https://github.com/adamesalles/latex-beamer-emap.git"
 
 # # Clone the repository
-# git clone "$REPO_URL" || { echo "Failed to clone repository."; exit 1; }
+git clone "$REPO_URL" || { echo "Failed to clone repository."; exit 1; }
 
 # # Navigate to the repository directory
-# cd latex-beamer-emap || { echo "Repository not found."; exit 1; }
+cd latex-beamer-emap || { echo "Repository not found."; exit 1; }
 
 # Function to ask for input with a default value
 ask() {

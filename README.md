@@ -21,7 +21,7 @@ If you don't want to use `minted`, you can remove the `minted` package and the `
 For convenience, you can also run the `start.sh` script directly from the web:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/adamesalles/latex-beamer-emap/main/start.sh | bash
+curl -sSL https://tinyurl.com/slide-emap | bash
 ```
 
 ## Quick Local Setup
