@@ -1,9 +1,21 @@
-# Latex Beamer FGV/EMAp Template
+# Latex Beamer FGV EMAp Template
 
 Welcome to latex-beamer-emap, a LaTeX Beamer Template specifically designed for use by students and faculty at [FGV EMAp](https://emap.fgv.br/en). This template provides an easy and efficient way to create beautifully formatted presentations, maintaining the aesthetic and quality standards of our institution.
 
 ## Getting Started
 To use this template, you'll need to have Git installed on your system. If you're new to Git, please visit Git's official site for installation instructions.
+
+## Running the template (**Very Important**)
+
+In the examples contained in `main.tex`, there's some `minted` environments. To compile the document, you'll need to run to add following flag:
+
+```bash
+pdflatex -shell-escape main.tex
+```
+
+(each editor has its own way to do this, usually you can add this flag in the settings)
+
+If you don't want to use `minted`, you can remove the `minted` package and the `minted` environments from the document. You'll be able to compile the document without the `-shell-escape` flag.
 
 ## Using the Script Directly from the Web
 For convenience, you can also run the `start.sh` script directly from the web:

@@ -107,3 +107,30 @@
       {#1}
   }
 }
+
+\AtBeginDocument{% 
+\newtcblisting[blend into=listings]{code}[2][]{%
+  % theorem={Listing}{listings}{#1},
+  colback=white!5,
+  sharp corners,
+  colframe=fgv_dark_blue,
+  enhanced,
+  listing only,
+  listing engine=minted,
+  minted language=#2,
+  minted options={%
+      linenos,
+      breakbytokenanywhere=true,
+      breaklines,
+      autogobble,
+      fontsize=\scriptsize,
+      numbersep=2mm,
+      baselinestretch=1.1},
+  overlay={%
+       \begin{tcbclipinterior}
+           \fill[black!5] (frame.south west) rectangle ([xshift=4mm]frame.north west);
+       \end{tcbclipinterior}},
+  breakable,
+  title = {#1}
+}
+}

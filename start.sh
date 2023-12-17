@@ -36,14 +36,17 @@ format_authors() {
         author_email=$(ask "Enter email of author $i" "email$i@example.com")
         
         if [ $i -gt 1 ]; then
-            if [ $i -eq 2 ] || [ $i -eq 3 ] || [ $i -eq 5 ]; then
-                authors+=" \and "
-            elif [ $i -eq 4 ]; then
-                authors+="\\ \\vspace{.2cm} \\hspace{.2cm} "
+            if [ $i -eq 2 ]  || [ $i -eq 4 ]; then
+                authors+="\n \\\and \n"
+            elif [ $i -eq 3 ] || [ $i -eq 5 ] || [ $count -gt 3 ]; then
+                authors+="\\\\\\\\ \\\vspace{.2cm} \\\hspace{.2cm}\n"
+            elif [ $i -eq 3 ] || [ $count -eq 3 ]; then
+                authors+="\\\\\\\\ \\\vspace{.2cm} \n"
             fi
+
         fi
 
-        authors+="\\newauthor{$author_name}{$author_email}"
+        authors+="\\\newauthor{$author_name}{$author_email}"
     done
 
     echo "$authors"
@@ -53,17 +56,17 @@ format_authors() {
 title=$(ask "Enter the title" "Default Title")
 num_authors=$(ask "Enter number of authors (1-5)" 1)
 authors=$(format_authors "$num_authors")
-date=$(ask "Enter the date" "\today")
+date=$(ask "Enter the date" "\\\today")
 place=$(ask "Enter the place" "Rio de Janeiro, Brazil")
 special_thanks=$(ask "Enter special thanks" "Crazy Frog")
 # language=$(ask "Enter the language (Portuguese/English)" "English")
 
 # Replace placeholders in main.tex
-sed -i "s/\:title\:/$title/g" main.tex
-sed -i "s/\:authors\:/$authors/g" main.tex
-sed -i "s/\:date\:/$date/g" main.tex
-sed -i "s/\:place\:/$place/g" main.tex
-sed -i "s/\:special\-thanks\:/$special_thanks/g" main.tex
+sed -i "s/:title:/$title/g" main.tex
+sed -i "s/:authors:/$authors/g" main.tex
+sed -i "s/:date:/$date/g" main.tex
+sed -i "s/:place:/$place/g" main.tex
+sed -i "s/:special\-thanks:/$special_thanks/g" main.tex
 # sed -i "s/\:language\:/$language/g" main.tex
 
 echo "Enjoy your presentation!"
