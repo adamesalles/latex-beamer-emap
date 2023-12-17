@@ -16,7 +16,9 @@ cd latex-beamer-emap || { echo "Repository not found."; exit 1; }
 ask() {
     local prompt="$1"
     local default="$2"
-    read -p "$prompt [$default]: " input
+    
+    # Read from the user's terminal
+    read -p "$prompt [$default]: " input </dev/tty
     echo "${input:-$default}"
 }
 
