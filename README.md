@@ -40,7 +40,7 @@ chmod +x start.sh
 ./start.sh
 ```
 
-3. Follow the Prompts: The script will prompt you to enter details like the presentation's title, authors, date, and language. You can choose up to 5 authors, and the script will format the authors' section appropriately.
+3. Follow the Prompts: The script will prompt you to enter details like the presentation's title, authors and date. You can choose up to 5 authors, and the script will format the authors' section appropriately.
 
 
 ## Customization
@@ -62,4 +62,4 @@ Special thanks to [prof. Yuri Saporito](yurisaporito.com) for providing the earl
 
 which inspired me to publish this repo - even though it is still a work in progress.
 
-Also, thanks to [Tulio Koneçny](https://matematicaeparatodos.com/), [Daniel Csillag](https://github.com/dccsillag) and [Prof. Claudio Struchiner](https://emap.fgv.br/professores/claudio-jose-struchiner) for their suggestions.
+Also, thanks to [Tulio Koneçny](https://matematicaeparatodos.com/), [Daniel Csillag](https://github.com/dccsillag) and [prof. Claudio Struchiner](https://emap.fgv.br/professores/claudio-jose-struchiner) for their suggestions.

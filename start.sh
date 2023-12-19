@@ -1,26 +1,29 @@
 #!/bin/bash
 
+# Function to ask for input with a default value
+ask() {
+    local prompt="$1"
+    local default="$2"
+
+    # Read from the user's terminal
+    read -p "$prompt [$default]: " input </dev/tty
+    echo "${input:-$default}"
+}
+
 # Give a message to the user
 echo "Welcome to the LaTeX Beamer Template for EMAp - by Adame"
 
 # Define the repository URL
 REPO_URL="https://github.com/adamesalles/latex-beamer-emap.git"
 
+name=$(ask "Enter your project name" "latex-beamer-emap")
+
 # # Clone the repository
-git clone "$REPO_URL" || { echo "Failed to clone repository."; exit 1; }
+git clone "$REPO_URL" "$name" || { echo "Failed to clone repository."; exit 1; }
 
 # # Navigate to the repository directory
-cd latex-beamer-emap || { echo "Repository not found."; exit 1; }
+cd "$name" || { echo "Repository not found."; exit 1; }
 
-# Function to ask for input with a default value
-ask() {
-    local prompt="$1"
-    local default="$2"
-    
-    # Read from the user's terminal
-    read -p "$prompt [$default]: " input </dev/tty
-    echo "${input:-$default}"
-}
 
 # Function to format authors based on count
 format_authors() {
@@ -36,7 +39,7 @@ format_authors() {
     for ((i = 1; i <= count; i++)); do
         author_name=$(ask "Enter name of author $i" "Author $i")
         author_email=$(ask "Enter email of author $i" "email$i@example.com")
-        
+
         if [ $i -gt 1 ]; then
             if [ $i -eq 2 ]  || [ $i -eq 4 ]; then
                 authors+="\n \\\and \n"
