@@ -56,10 +56,10 @@ This project thrives on your input! If you have ideas, suggestions, or spot any 
 For any queries or suggestions, you can reach out to me at eadamesalles@gmail.com.
 
 ## Acknowledgments
-Special thanks to [prof. Yuri Saporito](yurisaporito.com) for providing the early version of this template in 2021. I would also like to thank [prof. Luiz Max de Carvalho](https://github.com/maxbiostat) for remembering me that quote from Lord Knuth: 
+Special thanks to [prof. Yuri Saporito](https://yurisaporito.com) for providing the early version of this template in 2021. I would also like to thank [prof. Luiz Max de Carvalho](https://github.com/maxbiostat) for remembering me that quote from Lord Knuth: 
 
 > Premature optimization is the root of all evil,
 
 which inspired me to publish this repo - even though it is still a work in progress.
 
-Also, thanks to [Tulio Koneçny](https://matematicaeparatodos.com/), [Daniel Csillag](https://github.com/dccsillag) and [prof. Claudio Struchiner](https://emap.fgv.br/professores/claudio-jose-struchiner) for their suggestions.
+Also, thanks to [Tulio Koneçny](https://matematicaeparatodos.com/), [Daniel Csillag](https://github.com/dccsillag) and [prof. Claudio Struchiner](https://emap.fgv.br/en/professors/claudio-jose-struchiner) for their suggestions.
